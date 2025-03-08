@@ -371,6 +371,7 @@
           microsoft-surface-pro-3 = import ./microsoft/surface-pro/3;
           microsoft-surface-pro-9 = import ./microsoft/surface-pro/9;
           milkv-pioneer = import ./milkv/pioneer;
+          milkv-mars = import ./milkv/mars;
           minisforum-um690 = import ./minisforum/um690;
           minisforum-um690s = import ./minisforum/um690s;
           minisforum-um790-pro = import ./minisforum/um790-pro;
