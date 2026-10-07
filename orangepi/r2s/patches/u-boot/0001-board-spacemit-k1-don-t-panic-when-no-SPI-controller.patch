@@ -1,0 +1,18 @@
+diff --git a/board/spacemit/k1/spl.c b/board/spacemit/k1/spl.c
+index ef23db62d6c..f49e7eaffa7 100644
+--- a/board/spacemit/k1/spl.c
++++ b/board/spacemit/k1/spl.c
+@@ -413,8 +413,11 @@ void nor_early_init(void)
+ 	int ret;
+ 
+ 	ret = uclass_get_device(UCLASS_SPI, 0, &dev);
+-	if (ret)
+-		panic("Fail to detect spi controller.\n");
++	if (ret) {
++		/* Not every board populates SPI NOR flash */
++		log_info("No spi controller found.\n");
++		return;
++	}
+ 	udelay(10);
+ 	ret = uclass_get_device(UCLASS_SPI_FLASH, 0, &dev);
+ 	if (ret)

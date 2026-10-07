@@ -1,0 +1,19 @@
+diff --git a/board/spacemit/k1/k1.env b/board/spacemit/k1/k1.env
+new file mode 100644
+index 00000000000..bfe874e96d4
+--- /dev/null
++++ b/board/spacemit/k1/k1.env
+@@ -0,0 +1,13 @@
++/* SPDX-License-Identifier: GPL-2.0+ */
++
++/* environment for SpacemiT K1 based boards */
++
++kernel_addr_r=0x10000000
++kernel_comp_addr_r=0x20000000
++kernel_comp_size=0x4000000
++fdt_addr_r=0x30000000
++fdtoverlay_addr_r=0x30100000
++scriptaddr=0x30200000
++pxefile_addr_r=0x30300000
++ramdisk_addr_r=0x30400000
++fdtfile=DEFAULT_FDT_FILE
